@@ -5,10 +5,6 @@ const cardsLightbox = createLightboxImg(galleryItems);
 
 lightboxConteiner.insertAdjacentHTML('afterbegin', cardsLightbox);
 
-lightboxConteiner.addEventListener('click', onLightboxConteinerClick);
-
-
-
 // create html lightbox
 function createLightboxImg(galleryItems) {
     return galleryItems
@@ -26,16 +22,8 @@ function createLightboxImg(galleryItems) {
     
 }
 
-function onLightboxConteinerClick(e) {
-    // запрет на скачивание
-    e.preventDefault();
-
-    // что б не кликалось на картинку + modal
-    if (e.target.nodeName !== "IMG") {
-        return;
-    }
-    // It's the best gallery for lazy people like me
-    let lightbox = new SimpleLightbox('.gallery a', {
+//  Modal window
+let lightbox = new SimpleLightbox('.gallery a', {
         /* options */
         captionsData: 'alt',
         captionDelay: 250,
@@ -45,10 +33,6 @@ function onLightboxConteinerClick(e) {
         scaleImageToRatio: true,
 
     });
- 
-}
-
-
 
 
 
