@@ -62,7 +62,7 @@ function onGalleryConteinerClick(e) {
     }
             
 }; 
-    
+// ===========================================================  
 
 //     changeActiveItemClass();
     
