@@ -47,7 +47,7 @@ function onGalleryConteinerClick(e) {
             instance.show();  
             console.log(e.target.dataset.source);
             window.addEventListener("keydown", (e) => {
-                if (e.code === "Escape" || "Enter") {
+                if (e.code === "Escape") {
                     instance.close();
                 }
             });
